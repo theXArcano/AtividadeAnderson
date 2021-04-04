@@ -1,28 +1,26 @@
 
-package atv1;
+package ex1;
 
 
-public class Poupanca extends Conta {
-    private double saldopou;
-  
-
-    public Poupanca(double saldopou,String nome, String num,double saldo) {
-        super(nome, num, saldo);
-        this.saldopou = saldopou;
-        
-    }
+public class Contaespecial extends Conta {
     
-    @Override 
+    private double saldoesp;
+    
+
+    public Contaespecial(double saldoesp, String nome, String num, double saldo) {
+        super(nome, num, saldo);
+        this.saldoesp = saldoesp;}
+    
+  @Override 
  public void verDados(){
         System.out.println("Nome : "+getNome());
         System.out.println("Numero da conta: "+getNum());
         System.out.println("Saldo em conta: "+getSaldo());
-        System.out.println("Tipo de conta: Conta poupança");
-        System.out.println("Saldo Poupança: "+saldopou);
+        System.out.println("Tipo de conta: Conta Especial");
+        System.out.println("Saldo Especial: "+saldoesp);
         System.out.println(""); 
     }
 
-    
 // SAque do saldo 
   public void Sacar(double saldo) {
         if (saldo > this.saldo){
@@ -34,16 +32,25 @@ public class Poupanca extends Conta {
         }
         
     }
-  //saque da poupança
+  //saque do limite
     public void Sacar(int saldo) {
-        if (saldo > this.saldopou){
+        if (saldo > this.saldoesp){
             System.out.println("Você não tem o valor requisitado em sua conta, saque indisponível");
         }
         else{
-        this.saldopou = this.saldopou - saldo;
+        this.saldoesp = this.saldoesp - saldo;
         
         }
         
     }
-
+  
 }
+
+    
+    
+    
+
+    
+  
+            
+   

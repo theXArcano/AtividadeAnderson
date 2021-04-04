@@ -1,5 +1,5 @@
 
-package atv1;
+package ex1;
 
 
 public class Conta {
@@ -15,7 +15,7 @@ public class Conta {
    this.saldo = saldo;
    }
 
-    public String getNome() {
+    public String getNome() { 
         return nome;   
     }
 
