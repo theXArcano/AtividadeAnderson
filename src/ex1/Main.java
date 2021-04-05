@@ -18,6 +18,7 @@ public class Main {
         c2.verDados();
         c3.verDados();
         
+        c2.verDados();
         c2.Depositar(100);
         c2.verDados();
         
